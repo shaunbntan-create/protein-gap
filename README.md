@@ -2,7 +2,7 @@
 
 **Log a meal, get the ONE longevity nutrient you're most likely missing today.**
 
-A tiny, single-file web app. No build step, no backend, no account - your log lives in `localStorage` on your device. Type what you ate in plain English ("salmon, spinach, brown rice") and Protein Gap scans it against six longevity pillars, then surfaces the single highest-priority gap with the easiest fix.
+A tiny, single-file web app. No build step, no backend, no account - your log lives in `localStorage` on your device. Set your metrics once and Protein Gap calculates your personal daily targets. Then log meals in plain English ("salmon, spinach, brown rice") across Breakfast / Lunch / Dinner and it surfaces the single target you're furthest from hitting, with the easiest fix.
 
 ![Protein Gap - light and dark](docs/preview.png)
 
@@ -23,12 +23,24 @@ Prioritised by how commonly people miss them:
 
 The nutrient model is a transparent keyword map (Layne Norton / Huberman / Blueprint flavoured), all in `index.html` - edit it to taste.
 
+## Personalized targets
+
+Enter your sex, age, weight, height, activity level and goal (metric or imperial). Protein Gap computes a daily target for each pillar so the numbers match your body, not an average:
+
+- **Protein** - g/kg bodyweight, adjusted up for a cut or lean bulk
+- **Fiber** - 14g per 1,000 kcal, off your Mifflin-St Jeor TDEE
+- **Omega-3** - baseline EPA/DHA target, higher if you train hard
+- **Greens / colour / fermented** - daily serving targets
+
 ## Features
 
-- Daily meal logging with instant pillar detection
-- Circular coverage ring + "today's gap" focus card
-- Per-meal breakdown of which pillars each meal covered
+- Personal daily targets auto-calculated from your metrics
+- Breakfast / Lunch / Dinner meal slots, plus add-a-meal for snacks
+- Plain-English logging with instant per-item nutrient estimates
+- Each pillar shows `current / target` with a progress bar
+- Coverage ring + "today's gap" focus card that always names your next fix
 - This-week strip with a logging streak
+- Animated logo splash that blurs into the app
 - Light + dark themes (auto / light / dark toggle)
 - 100% offline, one HTML file, zero dependencies
 
